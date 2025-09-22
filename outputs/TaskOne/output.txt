@@ -1,0 +1,6 @@
+---begin output ---
+1142725631254665682354316777216387420489
+---end output ---
+2025-09-22T14:36:07.845+03:00  INFO 23176 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-22T14:36:07.849+03:00  INFO 23176 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-22T14:36:07.850+03:00  INFO 23176 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
