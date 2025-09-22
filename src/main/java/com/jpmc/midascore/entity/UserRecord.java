@@ -1,3 +1,5 @@
+// midas.src.main.java.com.jpmc.midascore.entity.UserRecord
+
 package com.jpmc.midascore.entity;
 
 import jakarta.persistence.*;
