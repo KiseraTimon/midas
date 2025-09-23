@@ -1,0 +1,15 @@
+2025-09-23T10:15:34.103+03:00  INFO 8836 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : midas-core: partitions assigned: [transactions-0]
+[Task4] Wilbur balance after tx (sender): 3460.21 | floored=3460
+[Task4] Wilbur balance after tx (sender): 3452.21 | floored=3452
+[Task4] Wilbur balance after tx (recipient): 455.55 | floored=455
+[Task4] Wilbur balance after tx (recipient): 560.08997 | floored=560
+[Task4] Wilbur balance after tx (recipient): 486.4 | floored=486
+[Task4] Wilbur balance after tx (sender): 3321.8398 | floored=3321
+[Task4] Wilbur balance after tx (sender): 3193.3699 | floored=3193
+[Task4] Wilbur balance after tx (sender): 3089.42 | floored=3089
+[Task4] Wilbur balance after tx (recipient): 459.58 | floored=459
+2025-09-23T10:15:35.540+03:00  INFO 8836 --- [           main] com.jpmc.midascore.TaskFourTests         : ----------------------------------------------------------
+2025-09-23T10:15:35.540+03:00  INFO 8836 --- [           main] com.jpmc.midascore.TaskFourTests         : ----------------------------------------------------------
+2025-09-23T10:15:35.540+03:00  INFO 8836 --- [           main] com.jpmc.midascore.TaskFourTests         : ----------------------------------------------------------
+2025-09-23T10:15:35.540+03:00  INFO 8836 --- [           main] com.jpmc.midascore.TaskFourTests         : use your debugger to find out what wilbur's balance is after all transactions are processed
+2025-09-23T10:15:35.540+03:00  INFO 8836 --- [           main] com.jpmc.midascore.TaskFourTests         : kill this test once you find the answer
