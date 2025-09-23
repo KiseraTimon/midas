@@ -55,4 +55,8 @@ incentive:
   api:
     base-url: http://localhost:8080
 
+# Server Config
+server:
+  port: 33400
+
 
