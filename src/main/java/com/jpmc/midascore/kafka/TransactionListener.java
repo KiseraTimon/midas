@@ -2,6 +2,7 @@
 
 package com.jpmc.midascore.kafka;
 
+import com.jpmc.midascore.component.DatabaseConduit;
 import com.jpmc.midascore.foundation.Transaction;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,19 +27,28 @@ public class TransactionListener {
     // Logs Received Info
     private final List<Transaction> received = new CopyOnWriteArrayList<>();
 
+    // Database Conduit
+    private final DatabaseConduit databaseConduit;
+
     // Configuring Topic Name from yml
     @Value("${midas.kafka.topic.transactions}")
     private String topic;
 
-    @KafkaListener(topics = "${midas.kafka.topic.transactions}")
+    // Constructor
+    public TransactionListener(DatabaseConduit databaseConduit) {
+        this.databaseConduit = databaseConduit;
+    }
+
+    @KafkaListener(topics = "${midas.kafka.topic.transactions}", groupId = "${spring.application.name:midas-core}")
     public void onMessage(
-            Transaction tx,
-            @Header(KafkaHeaders.OFFSET) long offset,
-            @Header(KafkaHeaders.RECEIVED_PARTITION) int partition
+            Transaction tx
+//            @Header(KafkaHeaders.OFFSET) long offset,
+//            @Header(KafkaHeaders.RECEIVED_PARTITION) int partition
     ) {
-        received.add(tx);
-        // Logging only
-        log.debug("Received tx on topic='{}' partition={} offset={}: {}", topic, partition, offset, tx);
+        databaseConduit.validateAndRecord(tx);
+//        received.add(tx);
+//        // Logging only
+//        log.debug("Received tx on topic='{}' partition={} offset={}: {}", topic, partition, offset, tx);
     }
 
     /** Exposed for tests/debugger to read the collected transactions. */
