@@ -1,12 +1,15 @@
+# General Config
+general:
+  kafka-topic: ${midas.kafka.topic.transactions}
+
+# Midas-Spring Config
 midas:
   kafka:
     topic:
       transactions: transactions
 
-general:
-  kafka-topic: ${midas.kafka.topic.transactions}
-
 spring:
+  # Kafka
   kafka:
     # We will use the embedded kafka port if provided and fall back to predefined port otherwise
     bootstrap-servers: ${spring.embedded.kafka.brokers:localhost:57085}
@@ -27,6 +30,22 @@ spring:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
 
+  # Database
+  datasource:
+    url: jdbc:h2:mem:midas;DB_CLOSE_DELAY=-1;MODE=PostgreSQL
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+  h2:
+    console:
+      enabled: true
+
+
+# Logging Config
 logging:
   level:
     com.jpmc.midascore.kafka: DEBUG
