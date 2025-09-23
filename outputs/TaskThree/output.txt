@@ -1,0 +1,9 @@
+[Task3] Waldorf balance after tx (recipient): 489.96997 | floored=489
+[Task3] Waldorf balance after tx (recipient): 522.08997 | floored=522
+[Task3] Waldorf balance after tx (sender): 443.34998 | floored=443
+[Task3] Waldorf balance after tx (recipient): 627.86 | floored=627
+2025-09-22T22:47:30.182+03:00  INFO 14584 --- [           main] com.jpmc.midascore.TaskThreeTests        : ----------------------------------------------------------
+2025-09-22T22:47:30.182+03:00  INFO 14584 --- [           main] com.jpmc.midascore.TaskThreeTests        : ----------------------------------------------------------
+2025-09-22T22:47:30.182+03:00  INFO 14584 --- [           main] com.jpmc.midascore.TaskThreeTests        : ----------------------------------------------------------
+2025-09-22T22:47:30.182+03:00  INFO 14584 --- [           main] com.jpmc.midascore.TaskThreeTests        : use your debugger to find out what waldorf's balance is after all transactions are processed
+2025-09-22T22:47:30.182+03:00  INFO 14584 --- [           main] com.jpmc.midascore.TaskThreeTests        : kill this test once you find the answer
